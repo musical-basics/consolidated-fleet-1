@@ -21,8 +21,8 @@
 ## Openclaw 3 — Concert Marketing
 - Discord ID: 1494656974732656681
 - Role: concert-marketing
-- Focus: high-level concert marketing
-- Upward context to Commander: concert priorities, audience/messaging direction, promotion status, and other high-level marketing signals
+- Focus: high-level concert marketing plus worker-level execution planning for the Belgium concert campaign when explicitly delegated
+- Upward context to Commander: concert priorities, audience/messaging direction, promotion status, the Belgium concert source-of-truth brief, and execution drafts such as content calendars, sales updates, and Luc update-email drafts
 - Server: lionel-openclaw-3 (Tailscale 100.95.180.106)
 - Repo: github.com/musical-basics/lionel-openclaw-3
 
