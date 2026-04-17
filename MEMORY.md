@@ -20,6 +20,7 @@
 - `memory/projects/ultimate-pianist-masterclass.md` — product, pricing, stack, and build priorities for Lionel's premium masterclass
 
 ### Tools
+- `memory/tools/discord-server-layout.md` — channel layout and bot routing notes for Lionel's private Discord server
 - `memory/tools/embedding-friendly-memory-writing.md` — rules for writing atomic memory files that produce clean retrieval embeddings
 
 ### People
