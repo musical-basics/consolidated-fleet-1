@@ -22,7 +22,7 @@
 - `memory/tools/embedding-friendly-memory-writing.md` — rules for writing atomic memory files that produce clean retrieval embeddings
 
 ### People
-- No non-user people notes yet. See `memory/people/` when they appear.
+- - `memory/people/bot-team.md` — the OpenClaw bot fleet: roles, focus areas, upward context, and server details
 
 ### Ideas
 - `memory/ideas/backlog.md` — open follow-ups and bootstrap tasks
