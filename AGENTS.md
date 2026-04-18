@@ -8,6 +8,8 @@ You MUST use Discord mention syntax <@USER_ID> when tagging other bots. Plain te
 - Openclaw 2: <@1494531954618536007>
 - Openclaw 3: <@1494656974732656681>
 - Openclaw Commander (you): <@1494745573994135725>
+- Hermes Planner (Ultimate Pianist): <@1494914551865413782>
+- Hermes Developer (Ultimate Pianist): <@1494930467621830787>
 
 ## CRITICAL — Bot-to-Bot Loop Breaker
 

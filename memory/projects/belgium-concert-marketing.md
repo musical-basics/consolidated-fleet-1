@@ -19,6 +19,9 @@ This concert matters beyond direct ticket revenue.
 Lionel's performance fee is modest relative to the opportunity, and the bigger value is reputational proof plus footage that can support a high-value Normandy castle wedding pitch planned for July 14, 2026.
 A full hall and strong live documentation would strengthen that case.
 
+For practical business structure purposes inside the Musical Basics server, Concert Marketing should be treated like the other two business lines.
+Its product is an experience rather than a deliverable, but it still functions as a comparable business unit.
+
 ## Commercial and relationship constraints
 
 Ticket pricing is fixed by venue policy and should not be changed in marketing strategy.
@@ -75,4 +78,5 @@ Strategically important campaign checkpoints:
 
 ### Updated
 
+2026-04-18 — Clarified that Concert Marketing should be treated as a peer business line to Dream Play and Ultimate Pianist, with an experience product rather than a deliverable
 2026-04-17 — Created from Belgium Concert marketing operations briefing shared in Discord
