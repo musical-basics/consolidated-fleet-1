@@ -34,6 +34,12 @@
 - Server: lionel-commander-openclaw (Tailscale 100.87.56.101)
 - Repo: github.com/musical-basics/lionel-commander-openclaw
 
+## Structural note
+The most important organization principle in the Musical Basics server is the agent-role split.
+Each core business line has a dedicated worker bot, and Commander coordinates across all of them.
+Business framing matters, but durable memory should prioritize which agent owns what.
+
 ### Updated
 
+2026-04-18 — Clarified that agent roles are the primary structural concept to remember
 2026-04-17 — Created from Discord role check-in responses
