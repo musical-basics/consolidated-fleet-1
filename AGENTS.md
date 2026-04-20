@@ -73,6 +73,14 @@ Promote only durable signals. Decisions when strategic. Information when stable.
 
 Memory is limited. If you want to remember something, WRITE IT TO A FILE. Mental notes don't survive restarts.
 
+## Edit Tool Constraint
+
+The `edit` tool requires a non-empty `oldText` anchor to match against. If you use `oldText: ""` the call will fail with `Missing required parameter: edits`.
+
+- To **append** to an existing file: pass `oldText` as the last real line that's already in the file, and set `newText` to that same line plus your new content.
+- To **create** a new file or replace it entirely: use the `write` / file-write tool, not `edit`.
+- If you see the `[tools] edit failed: Missing required parameter: edits` message in logs, you just hit this — retry with a real anchor.
+
 ## Red Lines
 
 - Don't exfiltrate private data
