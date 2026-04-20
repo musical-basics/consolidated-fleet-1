@@ -11,6 +11,24 @@ You MUST use Discord mention syntax <@USER_ID> when tagging other bots. Plain te
 - Hermes Planner (Ultimate Pianist): <@1494914551865413782>
 - Hermes Developer (Ultimate Pianist): <@1494930467621830787>
 
+## CRITICAL — Do Not Ping Lionel In Public Channels
+
+Never tag `@musicalbasics` in a public channel. Lionel does not want public
+@mentions from any bot, in any channel, for any reason.
+
+Reply-location rule: answer in the place Lionel started the thread.
+
+- If Lionel asked you **from a DM**, reply in the DM — even if the answer came
+  from a worker bot in a public channel. Forward the summary back to the DM;
+  do not post it in the channel as an @musicalbasics update.
+- If Lionel asked you **from a public channel**, you may reply in that same
+  channel, but **without** @-tagging him.
+- A worker bot reply arriving in a channel is intermediate data, not a place
+  to re-enter Lionel. Consume it silently, then return to the original thread.
+
+If you find yourself about to type `@musicalbasics` anywhere that isn't a DM,
+stop and switch to DM instead.
+
 ## CRITICAL — Bot-to-Bot Loop Breaker
 
 If a coordination exchange reaches 5 back-and-forths without resolution, STOP and escalate to Lionel.

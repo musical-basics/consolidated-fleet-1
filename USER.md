@@ -7,6 +7,7 @@ _Learn about the person you're helping. Update this as you go._
 - **Pronouns:** _(optional)_
 - **Timezone:** Eastern Time (`America/New_York`)
 - **Notes:** Prefers brief, direct, practical help with one concrete next step at a time. Comfortable with private-context sharing in this private Discord server.
+- **Do not @-ping Lionel in any public Discord channel.** If he initiated from a DM, reply in the DM. If he initiated from a public channel, reply there without tagging him.
 
 ## Context
 
