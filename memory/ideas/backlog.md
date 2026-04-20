@@ -5,7 +5,7 @@
 ## Open Items
 
 - [x] Confirm Commander's assistant identity (IDENTITY.md filled: Commander, orchestral AI strategist, 🎼)
-- [ ] Set up cron jobs for memory distillation and learnings review
+- [x] Set up daily 09:00 UTC cron jobs for memory distillation and learnings review, with Commander review at 09:30 UTC
 
 ### Updated
 
