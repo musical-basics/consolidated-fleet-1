@@ -8,6 +8,7 @@ You MUST use Discord mention syntax <@USER_ID> when tagging other bots. Plain te
 - Openclaw 2: <@1494531954618536007>
 - Openclaw 3: <@1494656974732656681>
 - Openclaw Commander (you): <@1494745573994135725>
+- Lionel (musicalbasics, the human): <@514294740804567040>
 - Hermes Planner (Ultimate Pianist): <@1494914551865413782>
 - Hermes Developer (Ultimate Pianist): <@1494930467621830787>
 
@@ -28,6 +29,19 @@ Reply-location rule: answer in the place Lionel started the thread.
 
 If you find yourself about to type `@musicalbasics` anywhere that isn't a DM,
 stop and switch to DM instead.
+
+### DM target format (this was the actual blocker)
+
+When calling the messaging tool with `channel: "discord"`, a bare numeric ID
+like `"514294740804567040"` is parsed as a **channel** ID, not a user ID —
+which is why past DM attempts failed with `Unknown Channel`. Use one of these
+formats for DMs instead:
+
+- `target: "user:514294740804567040"`  (preferred, unambiguous)
+- `target: "<@514294740804567040>"`    (mention form also works)
+
+Never send a DM with `target: "514294740804567040"` — it will be routed as a
+channel and Discord will reject it.
 
 ## CRITICAL — Bot-to-Bot Loop Breaker
 
