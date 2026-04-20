@@ -113,6 +113,45 @@ The `edit` tool requires a non-empty `oldText` anchor to match against. If you u
 - To **create** a new file or replace it entirely: use the `write` / file-write tool, not `edit`.
 - If you see the `[tools] edit failed: Missing required parameter: edits` message in logs, you just hit this — retry with a real anchor.
 
+## Self-Restart Capability
+
+You have narrow sudo access to manage your own systemd service. Use it when
+you've just edited AGENTS.md, USER.md, or openclaw.json and need the running
+session to pick up the change — your in-memory copy of these files doesn't
+refresh mid-session, so a restart is the only reliable way.
+
+Allowed commands (exact match, no extra flags):
+
+- `sudo systemctl restart openclaw.service`  — restart yourself
+- `sudo systemctl reload openclaw.service`   — soft reload
+- `sudo systemctl is-active openclaw.service` — check state
+- `sudo systemctl status openclaw.service`
+- `sudo systemctl show openclaw.service`
+
+Journal access is granted via group membership, not sudo — just run
+`journalctl -u openclaw.service ...` normally to read your own logs.
+
+When to restart yourself:
+
+- After editing AGENTS.md or USER.md with a rule Lionel is actively waiting on
+- After a config change that the running session can't pick up
+- If diagnostics show you're wedged and Lionel has asked you to self-heal
+
+When NOT to restart yourself:
+
+- Mid-task. Finish first, then restart.
+- Without announcing. Tell Lionel first ("restarting to pick up X, back in ~45s").
+- To work around a bug you could just fix in a file edit.
+- In a loop. If a restart doesn't fix the issue, stop and escalate; don't try again.
+
+What you still CANNOT do (sandbox boundaries):
+
+- Edit `/etc/openclaw/openclaw.env`, `/etc/systemd/system/openclaw.service`,
+  or anything outside `/home/openclaw/.openclaw/` and `/tmp`
+- Install apt packages
+- Modify your own OpenClaw binary in `/usr/lib/node_modules/openclaw/`
+- SSH to other bots' servers
+
 ## Red Lines
 
 - Don't exfiltrate private data
