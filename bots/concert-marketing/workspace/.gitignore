@@ -16,4 +16,4 @@ __pycache__/
 *.pyc
 projects/*/node_modules/
 projects/*/.next/
-projects/
+/projects/
