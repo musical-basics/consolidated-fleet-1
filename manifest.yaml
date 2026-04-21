@@ -55,7 +55,7 @@ instances:
       bot_id: "1496129135934705664"
     codex_oauth_profile: "openai-codex:yulionel829@gmail.com"
     seed_repo: "https://github.com/musical-basics/lionel-openclaw-3.git"
-    status: provisioning
+    status: active
 
   # Future:
   #   dreamplay (port 19002, reports_to commander)
