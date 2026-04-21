@@ -1,13 +1,22 @@
-.openclaw/
-node_modules/
-memory/.dreams/
+# Secrets / tokens — never commit
+*.env
+!*.env.template
+.git-credentials
+auth-profiles.json
+openclaw.json
+
+# Ephemeral / runtime artifacts
 *.log
-.env
-.env.*
-.cache/
-.npm-cache/
-.npm-global/
-.npm-tmp/
-.tmp/
-.tmp-home/
-.pm2/
+*.pid
+.DS_Store
+node_modules/
+/tmp/
+
+# OpenClaw runtime state not meant for source control
+canvas/
+logs/
+tasks/
+identity/runtime/
+
+# Memory "dreams" / scratch
+**/.dreams/

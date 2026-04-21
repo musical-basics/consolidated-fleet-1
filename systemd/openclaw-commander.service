@@ -1,0 +1,26 @@
+[Unit]
+Description=OpenClaw Commander (Consolidated Fleet)
+Documentation=https://docs.openclaw.ai
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=commander
+Group=commander
+WorkingDirectory=/home/commander
+EnvironmentFile=-/etc/openclaw/commander.env
+ExecStart=/usr/bin/openclaw gateway run
+Restart=on-failure
+RestartSec=8s
+TimeoutStopSec=20s
+
+# Security hardening
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=full
+ProtectHome=read-only
+ReadWritePaths=/home/commander/.openclaw /srv/consolidated-fleet /tmp
+
+[Install]
+WantedBy=multi-user.target

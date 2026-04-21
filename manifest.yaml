@@ -1,0 +1,78 @@
+# consolidated-fleet-1 — Instance registry
+# Source of truth for fleet state. Update when adding/removing a bot.
+# See docs/ARCHITECTURE.md for the federated model.
+
+host:
+  hostname: lionel-consolidated-1
+  public_ip: 178.104.191.10
+  tailscale_ip: null  # not joined yet
+  os: "Ubuntu 24.04.3 LTS"
+  ram_gb: 16
+  repo_checkout: /srv/consolidated-fleet
+
+shared:
+  openclaw_version: "2026.4.15"
+  node_version: "v22.22.2"
+  discordjs_opus_version: "^0.10.0"
+
+instances:
+  commander:
+    role: orchestrator
+    owns_global_memory: true
+    user: commander
+    home: /home/commander
+    workspace_symlink: /home/commander/.openclaw/workspace
+    workspace_target: bots/commander/workspace
+    config: /home/commander/.openclaw/openclaw.json
+    env_file: /etc/openclaw/commander.env
+    systemd_unit: openclaw-commander.service
+    gateway:
+      port: 19000
+      bind: loopback
+    discord:
+      bot_name: "Consolidated Commander 1"
+      bot_id: "1496094900620492840"
+    codex_oauth_profile: "openai-codex:yulionel829@gmail.com"
+    seed_repo: "https://github.com/musical-basics/lionel-commander-openclaw.git"
+    status: active
+
+  concert-marketing:
+    role: worker
+    domain: concert-marketing
+    reports_to: commander
+    user: concert-marketing
+    home: /home/concert-marketing
+    workspace_symlink: /home/concert-marketing/.openclaw/workspace
+    workspace_target: bots/concert-marketing/workspace
+    config: /home/concert-marketing/.openclaw/openclaw.json
+    env_file: /etc/openclaw/concert-marketing.env
+    systemd_unit: openclaw-concert-marketing.service
+    gateway:
+      port: 19001
+      bind: loopback
+    discord:
+      bot_name: "Consolidated Concert Marketing 1"
+      bot_id: "1496129135934705664"
+    codex_oauth_profile: "openai-codex:yulionel829@gmail.com"
+    seed_repo: "https://github.com/musical-basics/lionel-openclaw-3.git"
+    status: provisioning
+
+  # Future:
+  #   dreamplay (port 19002, reports_to commander)
+  #   ultimate-pianist (port 19003, reports_to commander)
+
+routing:
+  inbound_human_messages:
+    default_target: commander
+  worker_to_human:
+    allow_direct: false
+    relay_via_commander: true
+  worker_to_worker:
+    allow_direct: false
+    via_commander: true
+  file_transfer:
+    cross_instance: attachment
+
+ports:
+  base: 19000
+  next_free: 19002
