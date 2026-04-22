@@ -22,22 +22,27 @@
 ### Tools
 - `memory/tools/discord-server-layout.md` — channel layout and bot routing notes for Lionel's private Discord server
 - `memory/tools/embedding-friendly-memory-writing.md` — rules for writing atomic memory files that produce clean retrieval embeddings
+- `memory/tools/meeting-calendar.md` — separate meeting calendar memory for Lionel's appointments and time-bound commitments
 
 ### People
-- - `memory/people/bot-team.md` — the OpenClaw bot fleet: roles, focus areas, upward context, and server details
+- `memory/people/bot-team.md` — the Consolidated Fleet roster (symlinked to `/fleet-roster.md`, regenerated from `manifest.yaml`)
 
 ### Ideas
 - `memory/ideas/backlog.md` — open follow-ups and bootstrap tasks
+- `memory/ideas/todos.md` — separate todo list for open tasks and reminders
 
 ### Summaries
 - `memory/summaries/2026-04.md` — April 2026 summary
+- `memory/summaries/conversation-behavior-summary.md` — behavior patterns I've adopted in conversations with Lionel (active relay, one next step, DM-only-Lionel rules)
 
 ## Recently Promoted (last 30 days)
 
+- 2026-04-22 Imported behavior-teaching memory from Bot 4 Commander (conversation-behavior-summary, 2026-04-20 DM preference, todos, meeting calendar) to close the behavior gap observed when the consolidated Commander failed to DM Lionel after worker replies
 - 2026-04-17 Added Belgium concert marketing source-of-truth memory file and clarified bot-team role split around Commander vs Worker execution
 - 2026-04-17 Bootstrapped V2 memory system from scratch during initial server setup
 
 ## Distillation Log
 
+- 2026-04-22 Synced behavior memory from Bot 4 Commander (via lionel-commander-openclaw server); index updated with meeting-calendar, todos, conversation-behavior-summary pointers
 - 2026-04-17 Promoted Belgium concert marketing briefing into atomic project memory and updated bot-team role split
 - 2026-04-17 Initial V2 bootstrap — structure created, atomic files seeded from shared bot context
