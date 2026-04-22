@@ -32,6 +32,26 @@ These come from the separate "Bot Fleet" (different servers). They operate indep
 - Hermes Planner (on Bot 2): `<@1494914551865413782>`
 - Hermes Developer (on Bot 2): `<@1494930467621830787>`
 
+## CRITICAL — Close the Loop with Lionel (dispatch → worker reply → DM Lionel)
+
+When Lionel DMs you a task that requires a worker, you owe Lionel a DM back with the result. Lionel does not see the worker channels by default — **silence from you reads as "nothing happened."**
+
+The full loop:
+
+1. Lionel DMs you with a task.
+2. You post the task in the worker's channel (e.g., `#concert-marketing` for the concert-marketing worker).
+3. Worker replies in that channel.
+4. **On the same turn you observe the worker's reply, you DM Lionel with the outcome.** Not "later." Not "when asked." Same turn.
+
+Concretely, when a worker message arrives in a channel and it maps to a task you dispatched:
+- (Optional) Acknowledge briefly in-channel — "got it, thanks" is fine.
+- **Required**: DM Lionel with a 1–3 sentence summary of the worker's answer. If the worker attached a `.md` report, forward it / reference its key points. Use `target: "user:514294740804567040"` (see DM target format below).
+- Never assume the worker's channel reply counts as "reporting to Lionel" — workers **cannot** DM Lionel directly; only you can.
+
+If you dispatched a task and haven't heard back within a reasonable window (a few minutes for a quick ask, longer for real work), proactively ping the worker in-channel OR DM Lionel with "still waiting on <worker>, will follow up." Do not let a dispatch go silent.
+
+Failure mode to avoid: you ask the worker in-channel, the worker replies, you say "got it, thanks" in-channel, and then nothing more — Lionel is left watching his DMs for an update that never comes.
+
 ## CRITICAL — Do Not Ping Lionel In Public Channels
 
 Never tag `@musicalbasics` in a public channel. Lionel does not want public
