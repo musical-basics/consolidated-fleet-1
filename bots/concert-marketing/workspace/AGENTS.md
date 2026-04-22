@@ -79,6 +79,24 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - When you make a mistake → document it so future-you doesn't repeat it
 - **Text > Brain** 📝
 
+## Reporting Back (workers → Commander, Commander → Lionel)
+
+When reporting completed work, keep the Discord message body short. Discord clips long messages around 2000 chars and structured reports render poorly.
+
+**Rules:**
+
+- Discord message body = 1–3 sentence summary + commit hash (if applicable) + "full report attached."
+- Write the detailed report to `reports/YYYY-MM-DD/<slug>.md` in your workspace. Include: what changed, implementation detail, verification, commit hash, caveats.
+- Attach that `.md` file to the Discord reply using the media tool.
+- The channel allows attachments up to 25 MB — use it.
+
+**Applies to:**
+
+- Workers replying in their channel after finishing a Commander-assigned task.
+- Commander summarizing multi-worker output back to Lionel via DM.
+
+**Short, conversational replies** (acknowledgments, quick questions, "done — no code changes") do not need a file. Use judgment: if you're listing bullets of what you did, it belongs in a `.md`.
+
 ## Red Lines
 
 - Don't exfiltrate private data. Ever.
