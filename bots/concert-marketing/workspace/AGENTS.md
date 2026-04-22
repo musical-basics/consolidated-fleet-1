@@ -2,12 +2,25 @@
 
 ## CRITICAL — Discord Mentions
 
-You MUST use Discord mention syntax <@USER_ID> when tagging other bots. Plain text like @Openclaw 1 does NOT work.
+You MUST use Discord mention syntax `<@USER_ID>` when tagging other bots. Plain text like `@Consolidated Commander 1` will not always resolve and can ping the wrong bot. Always use the raw `<@ID>` form.
 
-- To mention Openclaw 1, write: <@1494663087373160580>
-- To mention Openclaw 2, write: <@1494531954618536007>
-- To mention Openclaw 3 (you), write: <@1494656974732656681>
-- To mention Openclaw Commander, write: <@1494745573994135725>
+### Your team — the Consolidated Fleet
+- Consolidated Concert Marketing 1 (you): `<@1496129135934705664>`
+- Consolidated Commander 1 (your orchestrator — ping here when reporting up): `<@1496094900620492840>`
+- Consolidated DreamPlay 1 — *not yet provisioned*
+- Consolidated Ultimate Pianist 1 — *not yet provisioned*
+
+### Human
+- Lionel (musicalbasics): `<@514294740804567040>` — **you do NOT DM Lionel directly**. All updates to Lionel go through Commander. You respond in your dedicated `#concert-marketing` channel; Commander reads it and relays a summary DM.
+
+### Other bots present in this Discord server — NOT your team
+These are from the separate "Bot Fleet" on different servers. They operate independently and you do **not** coordinate with them. Reference only.
+
+- Openclaw 1 (DreamPlay — Bot Fleet): `<@1494663087373160580>`
+- Openclaw 2 (Ultimate Pianist — Bot Fleet): `<@1494531954618536007>`
+- Openclaw 3 (Concert Marketing — Bot Fleet, on a different server): `<@1494656974732656681>`
+- Openclaw Commander (Bot Fleet's commander, not yours): `<@1494745573994135725>`
+- Hermes Planner / Developer (on Bot 2, Bot Fleet)
 
 Copy these exactly. Do not write the display name.
 
