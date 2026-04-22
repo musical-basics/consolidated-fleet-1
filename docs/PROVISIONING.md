@@ -70,14 +70,30 @@ sudo -u <role> bash -c 'cd /home/<role> && openclaw models set openai-codex/gpt-
 ### 8. Register in manifest.yaml
 Add a new block under `instances:` with all the metadata. Update `ports.next_free`.
 
-### 9. Start the service
+### 9. Regenerate the fleet roster
+Every bot's `memory/people/bot-team.md` is a symlink to `/srv/consolidated-fleet/fleet-roster.md`, which is auto-generated from `manifest.yaml`. Regenerate it so existing bots learn about the new worker on their next turn:
+
+```bash
+python3 /srv/consolidated-fleet/scripts/gen-fleet-roster.py
+```
+
+Also symlink the new worker's `memory/people/bot-team.md`:
+
+```bash
+ln -sf ../../../../../fleet-roster.md \
+  /srv/consolidated-fleet/bots/<role>/workspace/memory/people/bot-team.md
+```
+
+No restart needed — existing bots re-read memory per turn, so the new roster propagates on their next interaction.
+
+### 10. Start the service
 ```bash
 systemctl enable --now openclaw-<role>.service
 journalctl -u openclaw-<role>.service -n 30 --no-pager
 ```
 
-### 10. Write the per-worker config doc
+### 11. Write the per-worker config doc
 Create `docs/<ROLE>_CONFIG.md` mirroring `CONCERT_MARKETING_CONFIG.md`.
 
-### 11. Commit + push
-Commit the new `systemd/openclaw-<role>.service`, `bots/<role>/workspace/`, `manifest.yaml` changes, and the doc to the repo.
+### 12. Commit + push
+Commit the new `systemd/openclaw-<role>.service`, `bots/<role>/workspace/`, the regenerated `fleet-roster.md`, `manifest.yaml` changes, and the doc to the repo.
