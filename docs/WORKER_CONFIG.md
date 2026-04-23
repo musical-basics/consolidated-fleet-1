@@ -70,7 +70,7 @@ Group=<role>
 WorkingDirectory=/home/<role>
 EnvironmentFile=-/etc/openclaw/<role>.env
 ExecStart=/usr/bin/openclaw gateway run
-Restart=on-failure
+Restart=always
 RestartSec=8s
 TimeoutStopSec=20s
 
